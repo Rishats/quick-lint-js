@@ -74,7 +74,7 @@ jobs:
           path: ${{ matrix.toolchain.archive_name }}${{ matrix.toolchain.archive_extension }}
       - name: upload build to long-term storage
         if: ${{ github.event_name == 'push' && github.repository_owner == 'quick-lint' != null }}
-        uses: quick-lint/sftp-upload@master
+        uses: Rishats/sftp-upload@master
         with:
           host: ${{ secrets.artifacts_host }}
           local-file-globs: ${{ matrix.toolchain.archive_name }}${{ matrix.toolchain.archive_extension }}
