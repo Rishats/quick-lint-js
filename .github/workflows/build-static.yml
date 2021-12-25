@@ -212,7 +212,7 @@ jobs:
           name: quick-lint-js-npm-${{ github.sha }}
           path: quick-lint-js-*.tgz
       - name: upload package to long-term storage
-        if: ${{ github.event_name == 'push' && github.repository_owner == 'quick-lint' != null }}
+        if: ${{ github.event_name == 'push' && github.repository_owner == 'Rishats' != null }}
         uses: quick-lint/sftp-upload@master
         with:
           host: ${{ secrets.artifacts_host }}

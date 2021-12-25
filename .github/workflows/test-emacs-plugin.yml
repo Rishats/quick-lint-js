@@ -38,7 +38,7 @@ jobs:
           name: web-demo-dist-${{ github.sha }}
           path: plugin/emacs/quick-lint-js-emacs.zip
       - name: upload archive to long-term storage
-        if: ${{ github.event_name == 'push' && github.repository_owner == 'quick-lint' != null }}
+        if: ${{ github.event_name == 'push' && github.repository_owner == 'Rishats' != null }}
         uses: quick-lint/sftp-upload@master
         with:
           host: ${{ secrets.artifacts_host }}
